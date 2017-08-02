@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Deletegate">
+      <UniqueIdentifier>{e0dfaa91-a2e6-4c04-8d9e-73e48205495c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Layer">
+      <UniqueIdentifier>{c5f6aaa1-6608-43fc-ae5f-76d54aa7c0a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Scene">
+      <UniqueIdentifier>{418cfe56-5cf8-494a-baf1-ac8aa0d18833}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Monster">
+      <UniqueIdentifier>{57e99a17-9a76-4c81-b012-4df5b7601cb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Weapon">
+      <UniqueIdentifier>{c099419b-ff67-4146-ba4e-2943532240cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Tool">
+      <UniqueIdentifier>{185f81d1-c7fa-4538-bb02-70a1b6e9f4f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Buff">
+      <UniqueIdentifier>{4605e28d-725c-4d11-8a05-f7deb775c4c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src\Deletegate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackGroundLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BeginScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FStar.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Monster.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MenuLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MonsterLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rectangle.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SStar.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Star.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WeaponLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TouchLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Triangle.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Bullet.cpp">
+      <Filter>src\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Cannon.cpp">
+      <Filter>src\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CannonBoomData.cpp">
+      <Filter>src\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StaticData.cpp">
+      <Filter>src\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BeginLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameDataLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameOverScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TransitScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BossCattleHead.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BossCard.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BossHat.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Hat.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CattleHead.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameEndScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HeartBuff.cpp">
+      <Filter>src\Buff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BuffLayer.cpp">
+      <Filter>src\Layer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src\Deletegate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackGroundLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BeginScene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameScene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FStar.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Monster.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MenuLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MonsterLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rectangle.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SStar.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Star.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WeaponLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TouchLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Triangle.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Bullet.h">
+      <Filter>src\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Cannon.h">
+      <Filter>src\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CannonBoomData.h">
+      <Filter>src\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common.h">
+      <Filter>src\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StaticData.h">
+      <Filter>src\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BeginLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameDataLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameOverScene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TransitScene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BossCattleHead.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BossCard.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BossHat.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Hat.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CattleHead.h">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameEndScene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HeartBuff.h">
+      <Filter>src\Buff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BuffLayer.h">
+      <Filter>src\Layer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\game.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\static_data.plist">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -4,7 +4,7 @@
 #include"cocos2d.h"
 #include<list>
 
-class HeartBuff;
+class Buff;
 
 class BuffLayer :public cocos2d::Layer
 {
@@ -25,7 +25,7 @@ private:
 	*/
 	void update(float dt) override;
 
-	std::list<HeartBuff*> m_buffList;
+	std::list<Buff*> m_buffList;
 };
 
 #endif // !__BUFF_LAYER_H__

@@ -29,6 +29,11 @@ public:
 	static MonsterLayer* create(const Level level=Level_one);
 	bool init(Level level);
 
+	/*
+	*remveAllMonster();
+	*移除所有怪物
+	*/
+	void removeAllMonster();
 private:
 	/*
 	*CheckCollideWithBomb(float dt);
@@ -105,12 +110,6 @@ private:
 	*/
 	void GoNext();
 	void GoNext(float dt);
-
-	/*
-	*remveAllMonster();
-	*boss死亡后移除所有怪物
-	*/
-	void removeAllMonster();
 
 	/*
 	*randomCreateBuff();

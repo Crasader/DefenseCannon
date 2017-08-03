@@ -83,6 +83,12 @@ public:
 	*获取BuffLayer指针
 	*/
 	BuffLayer* getBuffLayer();
+
+	/*
+	*getMonsterLayer();
+	*获取怪物层指针
+	*/
+	MonsterLayer* getMonsterLayer();
 private:
 	BackGroundLayer* m_backgound;
 	WeaponLayer* m_weapon;

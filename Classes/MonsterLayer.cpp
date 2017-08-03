@@ -393,7 +393,7 @@ void MonsterLayer::removeAllMonster()
 void MonsterLayer::randomCreateBuff(CCPoint pos)
 {
 	random_device rand;
-	if (rand() % 100 < 20)
+	if (rand() % 100 < 10)
 	{
 		GameSecene* gameScene = dynamic_cast<GameSecene*>(getParent());
 		gameScene->getBuffLayer()->addBuff(pos);

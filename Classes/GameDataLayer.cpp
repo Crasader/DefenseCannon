@@ -80,6 +80,20 @@ bool GameDataLayer::init()
 		m_heartLabel->setPosition(size.width*0.26, size.height*0.8);
 		this->addChild(m_heartLabel);
 
+		CCSprite* spriteBomb = CCSprite::create(STATIC_STRING_DATA("NBomb"));
+		spriteBomb->setScale(0.35f);
+		spriteBomb->setPosition(size.width*0.24, size.height*0.74);
+		this->addChild(spriteBomb);
+
+		sstream << ":" << m_heartNum;
+		sstream >> str;
+		m_nBombLabel = LabelTTF::create(str, "¿¬Ìå", 24);
+		m_nBombLabel->setColor(ccc3(255, 0, 0));
+		m_nBombLabel->setScale(0.5f);
+		m_nBombLabel->setAnchorPoint(ccp(0, 0.5));
+		m_nBombLabel->setPosition(size.width*0.26, size.height*0.74);
+		this->addChild(m_nBombLabel);
+
 		CCMenuItemImage* saveGame = CCMenuItemImage::create(STATIC_STRING_DATA("saveGame"),
 			STATIC_STRING_DATA("saveGame1"),
 			this,
@@ -92,6 +106,7 @@ bool GameDataLayer::init()
 
 		setGlod(0);
 		setScore(0);
+		setNBomb(2);
 		setHeartNum(10);
 		return true;
 	}
@@ -152,6 +167,21 @@ void GameDataLayer::setHeartNum(const int & num)
 const int & GameDataLayer::getHeartNum()
 {
 	return m_heartNum;
+}
+
+void GameDataLayer::setNBomb(const int & n)
+{
+	m_nBomb = n >= MAX_NBOMB ? MAX_NBOMB : n;
+	stringstream sstream;
+	string str;
+	sstream << m_nBomb;
+	sstream >> str;
+	m_nBombLabel->setString(str);
+}
+
+const int & GameDataLayer::getNBomb()
+{
+	return m_nBomb;
 }
 
 void GameDataLayer::GameOver()

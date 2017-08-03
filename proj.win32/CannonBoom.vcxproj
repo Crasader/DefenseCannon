@@ -153,6 +153,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\BossCard.cpp" />
     <ClCompile Include="..\Classes\BossCattleHead.cpp" />
     <ClCompile Include="..\Classes\BossHat.cpp" />
+    <ClCompile Include="..\Classes\Buff.cpp" />
     <ClCompile Include="..\Classes\BuffLayer.cpp" />
     <ClCompile Include="..\Classes\Bullet.cpp" />
     <ClCompile Include="..\Classes\Cannon.cpp" />
@@ -168,6 +169,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\MenuLayer.cpp" />
     <ClCompile Include="..\Classes\Monster.cpp" />
     <ClCompile Include="..\Classes\MonsterLayer.cpp" />
+    <ClCompile Include="..\Classes\NBombBuff.cpp" />
     <ClCompile Include="..\Classes\Rectangle.cpp" />
     <ClCompile Include="..\Classes\SStar.cpp" />
     <ClCompile Include="..\Classes\Star.cpp" />
@@ -186,6 +188,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\BossCard.h" />
     <ClInclude Include="..\Classes\BossCattleHead.h" />
     <ClInclude Include="..\Classes\BossHat.h" />
+    <ClInclude Include="..\Classes\Buff.h" />
     <ClInclude Include="..\Classes\BuffLayer.h" />
     <ClInclude Include="..\Classes\Bullet.h" />
     <ClInclude Include="..\Classes\Cannon.h" />
@@ -202,6 +205,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\MenuLayer.h" />
     <ClInclude Include="..\Classes\Monster.h" />
     <ClInclude Include="..\Classes\MonsterLayer.h" />
+    <ClInclude Include="..\Classes\NBombBuff.h" />
     <ClInclude Include="..\Classes\Rectangle.h" />
     <ClInclude Include="..\Classes\SStar.h" />
     <ClInclude Include="..\Classes\Star.h" />

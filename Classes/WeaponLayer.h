@@ -9,6 +9,7 @@ class Bullet;
 class TouchLayer;
 class Monster;
 class HeartBuff;
+class Buff;
 
 /*
 *WeaponLayer
@@ -50,7 +51,7 @@ public:
 	*@Param buff：buff对象指针
 	*@return bool：true碰撞，false未碰撞
 	*/
-	bool CheckCollideWithBuff(HeartBuff* buff);
+	bool CheckCollideWithBuff(Buff* buff);
 private:
 	/*
 	*moveBullet(float dt)
@@ -76,6 +77,14 @@ private:
 	*增加大炮子弹速度按钮回调函数
 	*/
 	void addBulletVelocity(cocos2d::CCObject* sender);
+
+	/*
+	*releaseNBomb(cocos2d::CCObject* sender);
+	*释放核弹
+	*/
+	void releaseNBomb(cocos2d::CCObject* sender);
+
+	void removeRedLayer(float dt);
 
 	Cannon* m_pCannon;
 	std::list<Bullet*> m_BulletList;

@@ -1,9 +1,13 @@
 #include"BuffLayer.h"
 #include"Common.h"
+#include"Buff.h"
 #include"HeartBuff.h"
+#include"NBombBuff.h"
 #include"GameScene.h"
 #include"GameDataLayer.h"
 #include"WeaponLayer.h"
+#include<random>
+using namespace std;
 
 BuffLayer::BuffLayer()
 {
@@ -18,10 +22,6 @@ bool BuffLayer::init()
 	if (Layer::init())
 	{
 		this->scheduleUpdate();
-		CCActionInterval* big = CCScaleTo::create(0.2f, 1.02f);
-		CCActionInterval* tiny = CCScaleTo::create(0.2f, 0.98f);
-		auto action = CCSequence::create(big, tiny,nullptr);
-		this->runAction(CCRepeatForever::create(action));
 		return true;
 	}
 	return false;
@@ -29,8 +29,16 @@ bool BuffLayer::init()
 
 void BuffLayer::addBuff(cocos2d::CCPoint pos)
 {
-	HeartBuff* buff = HeartBuff::create();
-	buff->setScale(0.5f);
+	random_device rand;
+	Buff* buff = nullptr;
+	if (rand() % 100 >20 )
+	{
+		buff = HeartBuff::create();
+	}
+	else
+	{
+		buff = NBombBuff::create();
+	}
 	buff->setPosition(pos);
 	CCActionInterval* move = CCMoveBy::create(0.4f, ccp(0, 100));
 	buff->runAction(move);
@@ -41,7 +49,6 @@ void BuffLayer::addBuff(cocos2d::CCPoint pos)
 void BuffLayer::update(float dt)
 {
 	GameSecene* gamescene = dynamic_cast<GameSecene*>(getParent());
-	auto dataLayer = gamescene->getGameDataLayer();
 	auto weaponLayer = gamescene->getWeaponLayer();
 	for (auto it = m_buffList.begin(); it != m_buffList.end();)
 	{
@@ -52,7 +59,7 @@ void BuffLayer::update(float dt)
 		}
 		else if (weaponLayer->CheckCollideWithBuff(*it))
 		{
-			dataLayer->setHeartNum(dataLayer->getHeartNum() + 1);
+			(*it)->doBuffThing();
 			this->removeChild(*it);
 			it=m_buffList.erase(it);
 		}

@@ -126,6 +126,12 @@
     <ClCompile Include="..\Classes\BuffLayer.cpp">
       <Filter>src\Layer</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Buff.cpp">
+      <Filter>src\Buff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\NBombBuff.cpp">
+      <Filter>src\Buff</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -224,6 +230,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\BuffLayer.h">
       <Filter>src\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Buff.h">
+      <Filter>src\Buff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\NBombBuff.h">
+      <Filter>src\Buff</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

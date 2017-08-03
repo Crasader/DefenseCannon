@@ -139,3 +139,8 @@ BuffLayer * GameSecene::getBuffLayer()
 	return m_buffLayer;
 }
 
+MonsterLayer * GameSecene::getMonsterLayer()
+{
+	return m_monsterLayer;
+}
+

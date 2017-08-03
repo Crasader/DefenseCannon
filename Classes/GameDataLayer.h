@@ -41,10 +41,18 @@ public:
 	const int& getHeartNum();
 
 	/*
+	*m_nBomb玩家核弹数的setter和getter
+	*/
+	void setNBomb(const int& n);
+	const int& getNBomb();
+
+	/*
 	*GameOver()
 	*通知游戏场景游戏结束
 	*/
 	void GameOver();
+	
+	static const int MAX_NBOMB = 4;
 private:
 	/*
 	*callSaveGameBack(cocos2d::CCObject* sender);
@@ -57,10 +65,12 @@ private:
 	int m_score;
 	Level m_Level;
 	int m_heartNum;
+	int m_nBomb;
 	cocos2d::LabelTTF* m_glodLabel;
 	cocos2d::LabelTTF* m_scoreLabel;
 	cocos2d::LabelTTF* m_levelLabel;
 	cocos2d::LabelTTF* m_heartLabel;
+	cocos2d::LabelTTF* m_nBombLabel;
 };
 
 #endif // !__GAMEDATALAYRE_H__

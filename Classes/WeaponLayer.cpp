@@ -7,7 +7,8 @@
 #include"StaticData.h"
 #include"GameScene.h"
 #include"GameDataLayer.h"
-#include"HeartBuff.h"
+#include"MonsterLayer.h"
+#include"Buff.h"
 
 WeaponLayer::WeaponLayer()
 {
@@ -95,7 +96,7 @@ int WeaponLayer::CheckCollideWithMonster(Monster * monster)
 	return 0;
 }
 
-bool WeaponLayer::CheckCollideWithBuff(HeartBuff * buff)
+bool WeaponLayer::CheckCollideWithBuff(Buff * buff)
 {
 	if (buff->getCd() > 0)
 	{
@@ -159,8 +160,15 @@ void WeaponLayer::addCannonAbilityBtn()
 	m_addVelocityToggle->setScale(0.5f);
 	m_addVelocityToggle->setPosition(SCREEN_SIZE.width*0.55,
 		m_addVelocityToggle->getContentSize().height*0.25);
+
+	CCMenuItemImage* Nbomb = CCMenuItemImage::create(STATIC_STRING_DATA("NBomb"),
+		STATIC_STRING_DATA("NBomb1"),
+		this,
+		menu_selector(WeaponLayer::releaseNBomb));
+	Nbomb->setScale(0.45f);
+	Nbomb->setPosition(SCREEN_SIZE.width*0.23, SCREEN_SIZE.height*0.04);
 	
-	CCMenu* menu = CCMenu::create(m_addAttackToggle, m_addVelocityToggle, nullptr);
+	CCMenu* menu = CCMenu::create(Nbomb,m_addAttackToggle, m_addVelocityToggle, nullptr);
 	menu->setPosition(ccp(0, 0));
 	this->addChild(menu);
 }
@@ -176,4 +184,27 @@ void WeaponLayer::addBulletVelocity(cocos2d::CCObject * sender)
 	int index = m_addVelocityToggle->getSelectedIndex();
 	index == 1 ? m_pCannon->setVelocity(Velocity_Base * 2) :
 		m_pCannon->setVelocity(Velocity_Base);
+}
+
+void WeaponLayer::releaseNBomb(cocos2d::CCObject * sender)
+{
+	GameSecene* gamescene = dynamic_cast<GameSecene*>(getParent());
+	GameDataLayer* dataLayer = gamescene->getGameDataLayer();
+	int n = dataLayer->getNBomb();
+	if (n > 0)
+	{
+		dataLayer->setNBomb(n - 1);
+		CCLayerColor* red = CCLayerColor::create(ccc4(255, 0, 0, 128));
+		red->setTag(1036);
+		gamescene->addChild(red);
+		this->scheduleOnce(schedule_selector(WeaponLayer::removeRedLayer), 0.1f);
+	}
+}
+
+void WeaponLayer::removeRedLayer(float dt)
+{
+	GameSecene* gamescene = dynamic_cast<GameSecene*>(getParent());
+	gamescene->removeChildByTag(1036);
+	MonsterLayer* monsterLayer = gamescene->getMonsterLayer();
+	monsterLayer->removeAllMonster();
 }

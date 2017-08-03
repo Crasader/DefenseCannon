@@ -22,6 +22,6 @@
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0802/213633_3011bce9_1296205.jpeg "11.JPG")
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0802/213642_c57f3da9_1296205.jpeg "12.JPG")
 
-2017-8-3：19:04第一增量，游戏添加核弹，释放后清空屏幕上当前的所有怪物。
+2017-8-3：19:04第一增量，游戏添加核弹，释放后清空屏幕上当前的所有怪物，核弹上限为4个
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0803/190440_14c4ff70_1296205.jpeg "13.JPG")
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0803/190455_063cadbd_1296205.jpeg "14.JPG")
